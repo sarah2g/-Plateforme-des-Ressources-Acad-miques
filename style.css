@@ -1,0 +1,349 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px,10px;
+    box-shadow: 0,0,20px,rgb(12, 11, 11);
+    z-index: 100;
+   padding-left: 60px;
+   padding-right: 60px;
+   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.logo{
+        width: 100px ;
+        margin-left: 10%; 
+     
+        
+}
+.headerend ul{
+    margin-left: 25px;
+    display: flex;
+    list-style: none;
+}
+.headerend ul a{
+   margin-left: 15px;
+    text-transform: capitalize;
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+.headerend ul a::after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: "";
+    width: 0%;
+    height: 5px;
+    background-color: #007BFF;
+    transition: 0.1s ease-out;
+
+}
+.headerend ul a:hover::after {
+    width: 100%;
+     
+ }
+
+
+   .home {
+    margin-top: 80px;
+    background-color: #007BFF;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column; /* Met les éléments en colonne */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    text-align: center; /* Centre le texte */
+}
+.txt{
+    text-align: left;
+}
+.home h1{
+    margin: 20px;
+}
+.home p{
+    margin: 20px;
+   
+}
+
+.anne{
+    margin:50px 0 ;
+    padding: 0 10%;
+}
+
+
+.anne-list{
+    display: flex;
+    justify-content: space-between;
+}
+.anne-list img{
+   box-shadow: 0 0 9px rgba(0,0,0,0.1);
+   width: 350px;
+   border-radius: 10px;
+   margin-bottom: 20px;
+}
+h3{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.anne-list .box{
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+.anne-list .box:hover{
+    transform: scale(1.05);
+}
+.semester {
+    margin-top: 120px;
+    
+    background-position: center;
+    width: 60%;
+    height: 350px;
+    display: flex;
+    flex-direction: column; /* Met les éléments en colonne */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+    text-align: center; /* Centre le texte */
+    border-color: #007BFF;
+   border-style: solid;
+   border-width: 4px;
+ margin-left: 20%;
+ margin-right: 20%;
+}
+
+/* Style général pour le conteneur */
+.option {
+    width: 100%; /* Largeur complète */
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    overflow: hidden; /* Cache les débordements */
+    text-align: center; /* Centre le contenu */
+    padding: 10px 0; /* Espacement intérieur */
+}
+
+/* Style pour la liste */
+.option ul {
+    list-style: none; /* Supprime les puces */
+    display: flex; /* Alignement horizontal des éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Alignement vertical */
+}
+
+/* Style pour chaque élément de la liste */
+.option li {
+    margin: 0 15px; /* Espace entre les éléments */
+}
+
+/* Style pour les liens */
+.option a {
+    display: inline-flex; /* Alignement des icônes et du texte */
+    align-items: center; /* Centre verticalement l'icône et le texte */
+    gap: 10px; /* Espace entre l'icône et le texte */
+    text-decoration: none; /* Supprime le soulignement */
+    color: #333; /* Couleur du texte */
+    font-family: 'Arial', sans-serif; /* Police moderne */
+    font-size: 16px; /* Taille du texte */
+    padding: 12px 20px; /* Espacement intérieur */
+    border-radius: 8px; /* Coins arrondis */
+    transition: all 0.3s ease; /* Animation fluide */
+    position: relative; /* Pour les animations avancées */
+}
+
+/* Icônes */
+.option a i {
+    font-size: 20px; /* Taille des icônes */
+    transition: transform 0.3s ease; /* Animation pour les icônes */
+}
+
+/* Effet au survol */
+.option a:hover {
+    background-color: #007BFF; /* Bleu clair au survol */
+    color: #fff; /* Texte blanc */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Ombre accentuée */
+}
+
+/* Animation pour les icônes au survol */
+.option a:hover i {
+    transform: scale(1.2); /* Agrandit légèrement l'icône */
+}
+
+/* Effet actif (si vous ajoutez une classe "active" sur un lien) */
+.option a.active {
+    background-color: #0056b3; /* Bleu plus foncé */
+    color: #fff;
+}
+
+/* Animation pour le texte au survol */
+.option a span {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.option a:hover span::after {
+    content: ''; /* Ajoute une ligne sous le texte */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position sous le texte */
+    width: 100%;
+    height: 2px;
+    background-color: #fff; /* Couleur de la ligne */
+    transform: scaleX(0); /* Démarre à 0 */
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.option a:hover span::after {
+    transform: scaleX(1); /* Anime la ligne pour qu'elle s'étende */
+} 
+.option a:active {
+    transform: scaleX(1); /* Anime la ligne pour qu'elle s'étende */
+} 
+/* Style pour masquer les sous-options par défaut */
+.sub-options {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 150px; /* Largeur minimale */
+}
+
+.sub-options button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.sub-options button:hover {
+    background-color: #ddd;
+}
+
+/* Style pour le bouton principal */
+.main-btn {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.sub-options a {
+    text-decoration: none;
+}
+/* Styles par défaut pour grands écrans */
+
+/* Responsive pour téléphones et petits écrans */
+@media screen and (max-width: 768px) {
+    /* Style pour le header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 80px; /* Réduire la taille du logo */
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .headerend ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .headerend ul a {
+        font-size: 16px;
+    }
+
+    /* Style pour la section home */
+    .home {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 24px;
+    }
+
+    .home p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Style pour les listes */
+    .anne-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .anne-list img {
+        width: 100%;
+    }
+
+    /* Style pour les sections semester */
+    .semester {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .option ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .sub-options {
+     
+        overflow: visible;/* Eviter les problèmes d'affichage */
+    }
+
+    /* Style pour le footer */
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+
+    footer .btn {
+        margin: 5px;
+        font-size: 14px;
+    }
+    
+    main{
+        margin-top: 250px;
+    }
+}
